@@ -287,7 +287,8 @@
     pixQrCodeScreen.classList.remove("hidden");
     startPaymentPolling(transactionToken);
 
-    qrCodeImage.src = transactionInfo.qrCodeUrl;
+    // Generate QR Code dynamically from the PIX string (fallback or primary)
+    qrCodeImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(transactionInfo.pixCode)}`;
     pixCode.value = transactionInfo.pixCode;
     paymentField.textContent = formatPrice(19.35);
   }
