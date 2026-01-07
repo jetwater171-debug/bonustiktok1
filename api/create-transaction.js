@@ -38,7 +38,7 @@ export default async function handler(req, res) {
         amount: amount,
         description: "Produto Digital", // Default description
         reference: reference,
-        // productHash: "DEFAULT_HASH", // Removed potential invalid hash
+        productHash: process.env.PARADISE_PRODUCT_HASH, // REQUIRED by Paradise Pags API
         customer: {
             name: name,
             email: email,
@@ -82,7 +82,8 @@ export default async function handler(req, res) {
             console.error('Paradise Pags Error:', data);
             res.status(400).json({
                 success: false,
-                message: data.message || 'Erro ao criar transação na Paradise Pags'
+                message: data.message || 'Erro ao criar transação na Paradise Pags',
+                details: data // Send full response for debugging
             });
         }
 

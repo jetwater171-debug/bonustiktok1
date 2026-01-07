@@ -1097,7 +1097,9 @@
         const responseData = await response.json();
 
         if (!responseData.success) {
-          throw new Error(responseData.message || "Erro desconhecido na criação do pagamento");
+          const err = new Error(responseData.message || "Erro desconhecido na criação do pagamento");
+          err.cause = responseData; // Attach full response data
+          throw err;
         }
 
         localStorage.setItem(
@@ -1108,7 +1110,11 @@
         location.href = `checkout/index.html${window.location.search}`;
       } catch (error) {
         console.error("Erro ao gerar PIX:", error);
-        showError(error.message || "Ocorreu um erro ao processar o pagamento. Por favor, tente novamente.");
+        let msg = error.message;
+        if (error.cause && error.cause.details) {
+          msg += "\nDetalhes: " + JSON.stringify(error.cause.details);
+        }
+        showError(msg || "Ocorreu um erro ao processar o pagamento. Por favor, tente novamente.");
       }
     }
 
