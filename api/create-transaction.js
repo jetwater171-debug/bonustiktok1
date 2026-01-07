@@ -38,7 +38,7 @@ export default async function handler(req, res) {
         amount: amount,
         description: "Produto Digital", // Default description
         reference: reference,
-        productHash: "DEFAULT_HASH", // You might need to change this if you have a specific product hash
+        // productHash: "DEFAULT_HASH", // Removed potential invalid hash
         customer: {
             name: name,
             email: email,

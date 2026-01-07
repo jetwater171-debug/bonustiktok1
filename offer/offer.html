@@ -1108,9 +1108,7 @@
         location.href = `checkout/index.html${window.location.search}`;
       } catch (error) {
         console.error("Erro ao gerar PIX:", error);
-        showError(
-          "Ocorreu um erro ao processar o pagamento. Por favor, tente novamente."
-        );
+        showError(error.message || "Ocorreu um erro ao processar o pagamento. Por favor, tente novamente.");
       }
     }
 
