@@ -304,7 +304,7 @@
       }
 
       try {
-        const response = await fetch(`/${baseFolder}/verificar.php?id=${transactionToken}`);
+        const response = await fetch(`/api/check-status?id=${transactionToken}`);
         if (!response.ok) return;
 
         const result = await response.json();
@@ -322,7 +322,7 @@
           pixSuccessScreen.classList.remove("hidden");
 
           setTimeout(() => {
-            window.location.href = `/${baseFolder}/upsell1.html${window.location.search}`;
+            window.location.href = `../upsell1.html${window.location.search}`;
           }, 2000);
 
         } else if (

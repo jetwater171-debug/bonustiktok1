@@ -1096,6 +1096,10 @@
         });
         const responseData = await response.json();
 
+        if (!responseData.success) {
+          throw new Error(responseData.message || "Erro desconhecido na criação do pagamento");
+        }
+
         localStorage.setItem(
           "frontPaymentResponse",
           JSON.stringify(responseData)
