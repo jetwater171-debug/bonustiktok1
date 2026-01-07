@@ -1,6 +1,6 @@
 export default function handler(req, res) {
     const UPSELLS = {
-        'up0': { 'value': 5.00, 'formatted': 'R$ 5,00' },
+        'up0': { 'value': 19.35, 'formatted': 'R$ 19,35' },
         'up1': { 'value': 19.46, 'formatted': 'R$ 19,46' },
         'up2': { 'value': 26.84, 'formatted': 'R$ 26,81' },
         'up3': { 'value': 23.90, 'formatted': 'R$ 23,90' },
