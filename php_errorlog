@@ -1,0 +1,308 @@
+[07-Jan-2026 17:01:22 UTC] [INFO] 🔄 Iniciando processamento do webhook
+[07-Jan-2026 17:01:22 UTC] [INFO] 📦 Payload recebido: 
+[07-Jan-2026 17:01:22 UTC] [ERROR] ❌ Payload inválido recebido. Campos necessários não encontrados
+[07-Jan-2026 17:01:22 UTC] [DEBUG] 🔍 Campos disponíveis: Array
+(
+)
+
+[07-Jan-2026 17:01:30 UTC] [INFO] 🔄 Iniciando processamento do webhook
+[07-Jan-2026 17:01:30 UTC] [INFO] 📦 Payload recebido: {"pix":{"pix_qrcode_text":"00020101021226850014br.gov.bcb.pix2563qrcode.blupayip.com.br\/pix\/288f83a1-0da5-43c5-9b05-a2509d685f645204000053039865802BR5921MARKETPLACESEGUROLTDA6005Belem61086603506562070503***63046F30"},"items":[{"code":"DELIVERY001","name":"Delivery","total":1935,"amount":1}],"attemps":1,"currency":"BRL","customer":{"name":"Ana Pereira","email":"lorenz8350263@sedex.net","phone":"51996764571","document":"18372286710"},"metadata":[],"created_at":"2026-01-07 14:01:27","expires_at":"2026-01-08 17:01:27","updated_at":"2026-01-07 14:01:29","sale_amount":1935,"installments":1,"max_attempts":1,"payment_code":"vpay02836w","subscription":[],"external_code":"delivery_695e91679a484","payment_amount":1935,"payment_method":"pix","payment_status":"pending","shipping_amount":0,"installment_amount":1935}
+[07-Jan-2026 17:01:30 UTC] [ERROR] ❌ Payload inválido recebido. Campos necessários não encontrados
+[07-Jan-2026 17:01:30 UTC] [DEBUG] 🔍 Campos disponíveis: Array
+(
+    [0] => pix
+    [1] => items
+    [2] => attemps
+    [3] => currency
+    [4] => customer
+    [5] => metadata
+    [6] => created_at
+    [7] => expires_at
+    [8] => updated_at
+    [9] => sale_amount
+    [10] => installments
+    [11] => max_attempts
+    [12] => payment_code
+    [13] => subscription
+    [14] => external_code
+    [15] => payment_amount
+    [16] => payment_method
+    [17] => payment_status
+    [18] => shipping_amount
+    [19] => installment_amount
+)
+
+[07-Jan-2026 17:03:03 UTC] [INFO] 🔄 Iniciando processamento do webhook
+[07-Jan-2026 17:03:03 UTC] [INFO] 📦 Payload recebido: {"pix":{"pix_qrcode_text":"00020101021226850014br.gov.bcb.pix2563qrcode.blupayip.com.br\/pix\/f36a3faa-e6ff-4b6d-a082-6ea8812ad2a25204000053039865802BR5921MARKETPLACESEGUROLTDA6005Belem61086603506562070503***6304D7AC"},"items":[{"code":"DELIVERY001","name":"Delivery","total":1935,"amount":1}],"attemps":1,"currency":"BRL","customer":{"name":"Maria Gomes","email":"lorenz2841958@entrega.com","phone":"65963729274","document":"12006443798"},"metadata":[],"created_at":"2026-01-07 13:46:49","expires_at":"2026-01-08 16:46:50","updated_at":"2026-01-07 13:46:51","sale_amount":1935,"installments":1,"max_attempts":1,"payment_code":"vpaprl306e","subscription":[],"external_code":"delivery_695e8df9a8a4a","payment_amount":1935,"payment_method":"pix","payment_status":"pending","shipping_amount":0,"installment_amount":1935}
+[07-Jan-2026 17:03:03 UTC] [ERROR] ❌ Payload inválido recebido. Campos necessários não encontrados
+[07-Jan-2026 17:03:03 UTC] [DEBUG] 🔍 Campos disponíveis: Array
+(
+    [0] => pix
+    [1] => items
+    [2] => attemps
+    [3] => currency
+    [4] => customer
+    [5] => metadata
+    [6] => created_at
+    [7] => expires_at
+    [8] => updated_at
+    [9] => sale_amount
+    [10] => installments
+    [11] => max_attempts
+    [12] => payment_code
+    [13] => subscription
+    [14] => external_code
+    [15] => payment_amount
+    [16] => payment_method
+    [17] => payment_status
+    [18] => shipping_amount
+    [19] => installment_amount
+)
+
+[07-Jan-2026 17:04:02 UTC] [INFO] 🔄 Iniciando processamento do webhook
+[07-Jan-2026 17:04:02 UTC] [INFO] 📦 Payload recebido: {"pix":{"pix_qrcode_text":"00020101021226850014br.gov.bcb.pix2563qrcode.blupayip.com.br\/pix\/c0d307ba-6dd8-4dc7-8ad9-cde8a1df31095204000053039865802BR5921MARKETPLACESEGUROLTDA6005Belem61086603506562070503***630420CD"},"items":[{"code":"DELIVERY001","name":"Delivery","total":1935,"amount":1}],"attemps":1,"currency":"BRL","customer":{"name":"Daniel Fernandes","email":"lorenz8514382@sedex.net","phone":"68929996383","document":"64202347510"},"metadata":[],"created_at":"2026-01-07 13:47:01","expires_at":"2026-01-08 16:47:01","updated_at":"2026-01-07 13:47:03","sale_amount":1935,"installments":1,"max_attempts":1,"payment_code":"vpaeomkdn4","subscription":[],"external_code":"delivery_695e8e058f4d7","payment_amount":1935,"payment_method":"pix","payment_status":"pending","shipping_amount":0,"installment_amount":1935}
+[07-Jan-2026 17:04:02 UTC] [ERROR] ❌ Payload inválido recebido. Campos necessários não encontrados
+[07-Jan-2026 17:04:02 UTC] [DEBUG] 🔍 Campos disponíveis: Array
+(
+    [0] => pix
+    [1] => items
+    [2] => attemps
+    [3] => currency
+    [4] => customer
+    [5] => metadata
+    [6] => created_at
+    [7] => expires_at
+    [8] => updated_at
+    [9] => sale_amount
+    [10] => installments
+    [11] => max_attempts
+    [12] => payment_code
+    [13] => subscription
+    [14] => external_code
+    [15] => payment_amount
+    [16] => payment_method
+    [17] => payment_status
+    [18] => shipping_amount
+    [19] => installment_amount
+)
+
+[07-Jan-2026 17:04:02 UTC] [INFO] 🔄 Iniciando processamento do webhook
+[07-Jan-2026 17:04:02 UTC] [INFO] 📦 Payload recebido: {"pix":{"pix_qrcode_text":"00020101021226850014br.gov.bcb.pix2563qrcode.blupayip.com.br\/pix\/c0d307ba-6dd8-4dc7-8ad9-cde8a1df31095204000053039865802BR5921MARKETPLACESEGUROLTDA6005Belem61086603506562070503***630420CD"},"items":[{"code":"DELIVERY001","name":"Delivery","total":1935,"amount":1}],"attemps":1,"currency":"BRL","customer":{"name":"Daniel Fernandes","email":"lorenz8514382@sedex.net","phone":"68929996383","document":"64202347510"},"metadata":[],"created_at":"2026-01-07 13:47:01","expires_at":"2026-01-08 16:47:01","updated_at":"2026-01-07 13:47:58","approved_at":"2026-01-07 13:47:58","sale_amount":1935,"installments":1,"max_attempts":1,"payment_code":"vpaeomkdn4","subscription":[],"external_code":"delivery_695e8e058f4d7","payment_amount":1935,"payment_method":"pix","payment_status":"approved","shipping_amount":0,"installment_amount":1935}
+[07-Jan-2026 17:04:02 UTC] [ERROR] ❌ Payload inválido recebido. Campos necessários não encontrados
+[07-Jan-2026 17:04:02 UTC] [DEBUG] 🔍 Campos disponíveis: Array
+(
+    [0] => pix
+    [1] => items
+    [2] => attemps
+    [3] => currency
+    [4] => customer
+    [5] => metadata
+    [6] => created_at
+    [7] => expires_at
+    [8] => updated_at
+    [9] => approved_at
+    [10] => sale_amount
+    [11] => installments
+    [12] => max_attempts
+    [13] => payment_code
+    [14] => subscription
+    [15] => external_code
+    [16] => payment_amount
+    [17] => payment_method
+    [18] => payment_status
+    [19] => shipping_amount
+    [20] => installment_amount
+)
+
+[07-Jan-2026 17:05:56 UTC] [INFO] 🔄 Iniciando processamento do webhook
+[07-Jan-2026 17:05:56 UTC] [INFO] 📦 Payload recebido: {"pix":{"pix_qrcode_text":"00020101021226850014br.gov.bcb.pix2563qrcode.blupayip.com.br\/pix\/a4c9715c-e0e6-4997-8763-bb7838c53d585204000053039865802BR5921MARKETPLACESEGUROLTDA6005Belem61086603506562070503***6304FC2E"},"items":[{"code":"DELIVERY001","name":"Delivery","total":500,"amount":1}],"attemps":1,"currency":"BRL","customer":{"name":"Helena Souza","email":"customer+36269597242@mangofy.com.br","phone":"86949087420","document":"36269597242"},"metadata":[],"created_at":"2026-01-07 14:05:52","expires_at":"2026-01-08 17:05:52","updated_at":"2026-01-07 14:05:54","sale_amount":500,"installments":1,"max_attempts":1,"payment_code":"vpa4nj25n2","subscription":[],"external_code":"delivery_695e92705e154","payment_amount":500,"payment_method":"pix","payment_status":"pending","shipping_amount":0,"installment_amount":500}
+[07-Jan-2026 17:05:56 UTC] [ERROR] ❌ Payload inválido recebido. Campos necessários não encontrados
+[07-Jan-2026 17:05:56 UTC] [DEBUG] 🔍 Campos disponíveis: Array
+(
+    [0] => pix
+    [1] => items
+    [2] => attemps
+    [3] => currency
+    [4] => customer
+    [5] => metadata
+    [6] => created_at
+    [7] => expires_at
+    [8] => updated_at
+    [9] => sale_amount
+    [10] => installments
+    [11] => max_attempts
+    [12] => payment_code
+    [13] => subscription
+    [14] => external_code
+    [15] => payment_amount
+    [16] => payment_method
+    [17] => payment_status
+    [18] => shipping_amount
+    [19] => installment_amount
+)
+
+[07-Jan-2026 17:06:30 UTC] [INFO] 🔄 Iniciando processamento do webhook
+[07-Jan-2026 17:06:30 UTC] [INFO] 📦 Payload recebido: {"pix":{"pix_qrcode_text":"00020101021226850014br.gov.bcb.pix2563qrcode.blupayip.com.br\/pix\/a4c9715c-e0e6-4997-8763-bb7838c53d585204000053039865802BR5921MARKETPLACESEGUROLTDA6005Belem61086603506562070503***6304FC2E"},"items":[{"code":"DELIVERY001","name":"Delivery","total":500,"amount":1}],"attemps":1,"currency":"BRL","customer":{"name":"Helena Souza","email":"customer+36269597242@mangofy.com.br","phone":"86949087420","document":"36269597242"},"metadata":[],"created_at":"2026-01-07 14:05:52","expires_at":"2026-01-08 17:05:52","updated_at":"2026-01-07 14:06:27","approved_at":"2026-01-07 14:06:27","sale_amount":500,"installments":1,"max_attempts":1,"payment_code":"vpa4nj25n2","subscription":[],"external_code":"delivery_695e92705e154","payment_amount":500,"payment_method":"pix","payment_status":"approved","shipping_amount":0,"installment_amount":500}
+[07-Jan-2026 17:06:30 UTC] [ERROR] ❌ Payload inválido recebido. Campos necessários não encontrados
+[07-Jan-2026 17:06:30 UTC] [DEBUG] 🔍 Campos disponíveis: Array
+(
+    [0] => pix
+    [1] => items
+    [2] => attemps
+    [3] => currency
+    [4] => customer
+    [5] => metadata
+    [6] => created_at
+    [7] => expires_at
+    [8] => updated_at
+    [9] => approved_at
+    [10] => sale_amount
+    [11] => installments
+    [12] => max_attempts
+    [13] => payment_code
+    [14] => subscription
+    [15] => external_code
+    [16] => payment_amount
+    [17] => payment_method
+    [18] => payment_status
+    [19] => shipping_amount
+    [20] => installment_amount
+)
+
+[07-Jan-2026 17:12:03 UTC] [INFO] 🔄 Iniciando processamento do webhook
+[07-Jan-2026 17:12:03 UTC] [INFO] 📦 Payload recebido: {"pix":{"pix_qrcode_text":"00020101021226850014br.gov.bcb.pix2563qrcode.blupayip.com.br\/pix\/61833a59-86c4-4a1b-80ec-a7c027e5db3a5204000053039865802BR5921MARKETPLACESEGUROLTDA6005Belem61086603506562070503***6304E343"},"items":[{"code":"DELIVERY001","name":"Delivery","total":1935,"amount":1}],"attemps":1,"currency":"BRL","customer":{"name":"Luiza Barbosa","email":"customer+41212698452@mangofy.com.br","phone":"73988286721","document":"41212698452"},"metadata":[],"created_at":"2026-01-07 13:16:06","expires_at":"2026-01-08 16:16:06","updated_at":"2026-01-07 13:17:41","approved_at":"2026-01-07 13:17:41","sale_amount":1935,"installments":1,"max_attempts":1,"payment_code":"vpajepn1ok","subscription":[],"external_code":"delivery_695e86c5efa77","payment_amount":1935,"payment_method":"pix","payment_status":"approved","shipping_amount":0,"installment_amount":1935}
+[07-Jan-2026 17:12:03 UTC] [ERROR] ❌ Payload inválido recebido. Campos necessários não encontrados
+[07-Jan-2026 17:12:03 UTC] [DEBUG] 🔍 Campos disponíveis: Array
+(
+    [0] => pix
+    [1] => items
+    [2] => attemps
+    [3] => currency
+    [4] => customer
+    [5] => metadata
+    [6] => created_at
+    [7] => expires_at
+    [8] => updated_at
+    [9] => approved_at
+    [10] => sale_amount
+    [11] => installments
+    [12] => max_attempts
+    [13] => payment_code
+    [14] => subscription
+    [15] => external_code
+    [16] => payment_amount
+    [17] => payment_method
+    [18] => payment_status
+    [19] => shipping_amount
+    [20] => installment_amount
+)
+
+[07-Jan-2026 17:24:04 UTC] [INFO] 🔄 Iniciando processamento do webhook
+[07-Jan-2026 17:24:04 UTC] [INFO] 📦 Payload recebido: {"pix":{"pix_qrcode_text":"00020101021226850014br.gov.bcb.pix2563qrcode.blupayip.com.br\/pix\/61833a59-86c4-4a1b-80ec-a7c027e5db3a5204000053039865802BR5921MARKETPLACESEGUROLTDA6005Belem61086603506562070503***6304E343"},"items":[{"code":"DELIVERY001","name":"Delivery","total":1935,"amount":1}],"attemps":1,"currency":"BRL","customer":{"name":"Luiza Barbosa","email":"customer+41212698452@mangofy.com.br","phone":"73988286721","document":"41212698452"},"metadata":[],"created_at":"2026-01-07 13:16:06","expires_at":"2026-01-08 16:16:06","updated_at":"2026-01-07 13:17:41","approved_at":"2026-01-07 13:17:41","sale_amount":1935,"installments":1,"max_attempts":1,"payment_code":"vpajepn1ok","subscription":[],"external_code":"delivery_695e86c5efa77","payment_amount":1935,"payment_method":"pix","payment_status":"approved","shipping_amount":0,"installment_amount":1935}
+[07-Jan-2026 17:24:04 UTC] [ERROR] ❌ Payload inválido recebido. Campos necessários não encontrados
+[07-Jan-2026 17:24:04 UTC] [DEBUG] 🔍 Campos disponíveis: Array
+(
+    [0] => pix
+    [1] => items
+    [2] => attemps
+    [3] => currency
+    [4] => customer
+    [5] => metadata
+    [6] => created_at
+    [7] => expires_at
+    [8] => updated_at
+    [9] => approved_at
+    [10] => sale_amount
+    [11] => installments
+    [12] => max_attempts
+    [13] => payment_code
+    [14] => subscription
+    [15] => external_code
+    [16] => payment_amount
+    [17] => payment_method
+    [18] => payment_status
+    [19] => shipping_amount
+    [20] => installment_amount
+)
+
+[07-Jan-2026 17:40:19 UTC] [INFO] 🔄 Iniciando processamento do webhook
+[07-Jan-2026 17:40:19 UTC] [INFO] 📦 Payload recebido: {"pix":{"pix_qrcode_text":"00020101021226850014br.gov.bcb.pix2563qrcode.blupayip.com.br\/pix\/2b25796a-493a-4f36-a43a-c775dd496aa25204000053039865802BR5921MARKETPLACESEGUROLTDA6005Belem61086603506562070503***6304AC09"},"items":[{"code":"DELIVERY001","name":"Delivery","total":500,"amount":1}],"attemps":1,"currency":"BRL","customer":{"name":"Miguel Lima","email":"customer+05488002510@mangofy.com.br","phone":"43989077891","document":"05488002510"},"metadata":[],"created_at":"2026-01-07 14:40:16","expires_at":"2026-01-08 17:40:16","updated_at":"2026-01-07 14:40:17","sale_amount":500,"installments":1,"max_attempts":1,"payment_code":"vpa3pg24vj","subscription":[],"external_code":"delivery_695e9a8002dc9","payment_amount":500,"payment_method":"pix","payment_status":"pending","shipping_amount":0,"installment_amount":500}
+[07-Jan-2026 17:40:19 UTC] [Webhook] ℹ️ Processando pagamento ID: vpa3pg24vj com status: pending
+[07-Jan-2026 17:40:19 UTC] [INFO] [Webhook] ✅ Conexão com banco de dados estabelecida
+[07-Jan-2026 17:40:19 UTC] [INFO] 🔄 Atualizando status para: pending
+[07-Jan-2026 17:40:19 UTC] [INFO] 📁 Status salvo em arquivo: /home/customer/www/bonusdotiktok.com/public_html/transactions/vpa3pg24vj.json
+[07-Jan-2026 17:40:19 UTC] [Webhook] ❌ Erro: SQLSTATE[HY000]: General error: 1 no such table: pedidos
+[07-Jan-2026 17:40:19 UTC] [Webhook] 🔍 Stack trace: #0 /home/customer/www/bonusdotiktok.com/public_html/webhook.php(121): PDO->prepare('UPDATE pedidos ...')
+#1 {main}
+[07-Jan-2026 17:43:16 UTC] [INFO] 🔄 Iniciando processamento do webhook
+[07-Jan-2026 17:43:16 UTC] [INFO] 📦 Payload recebido: {"pix":{"pix_qrcode_text":"00020101021226850014br.gov.bcb.pix2563qrcode.blupayip.com.br\/pix\/aab9ff45-4e9c-403b-8e45-1e9ee023617e5204000053039865802BR5921MARKETPLACESEGUROLTDA6005Belem61086603506562070503***63043EB6"},"items":[{"code":"DELIVERY001","name":"Delivery","total":500,"amount":1}],"attemps":1,"currency":"BRL","customer":{"name":"Felipe Souza","email":"lorenz3120366@sedex.net","phone":"86950031585","document":"17214211572"},"metadata":[],"created_at":"2026-01-07 14:43:12","expires_at":"2026-01-08 17:43:12","updated_at":"2026-01-07 14:43:13","sale_amount":500,"installments":1,"max_attempts":1,"payment_code":"vpaprl3ooj","subscription":[],"external_code":"delivery_695e9b2fd54be","payment_amount":500,"payment_method":"pix","payment_status":"pending","shipping_amount":0,"installment_amount":500}
+[07-Jan-2026 17:43:16 UTC] [Webhook] ℹ️ Processando pagamento ID: vpaprl3ooj com status: pending
+[07-Jan-2026 17:43:16 UTC] [INFO] [Webhook] ✅ Conexão com banco de dados estabelecida
+[07-Jan-2026 17:43:16 UTC] [INFO] 🔄 Atualizando status para: pending
+[07-Jan-2026 17:43:16 UTC] [INFO] 📁 Status salvo em arquivo: /home/customer/www/bonusdotiktok.com/public_html/transactions/vpaprl3ooj.json
+[07-Jan-2026 17:43:16 UTC] [Webhook] ❌ Erro: SQLSTATE[HY000]: General error: 1 no such table: pedidos
+[07-Jan-2026 17:43:16 UTC] [Webhook] 🔍 Stack trace: #0 /home/customer/www/bonusdotiktok.com/public_html/webhook.php(121): PDO->prepare('UPDATE pedidos ...')
+#1 {main}
+[07-Jan-2026 17:44:30 UTC] [INFO] 🔄 Iniciando processamento do webhook
+[07-Jan-2026 17:44:30 UTC] [INFO] 📦 Payload recebido: {"pix":{"pix_qrcode_text":"00020101021226850014br.gov.bcb.pix2563qrcode.blupayip.com.br\/pix\/aab9ff45-4e9c-403b-8e45-1e9ee023617e5204000053039865802BR5921MARKETPLACESEGUROLTDA6005Belem61086603506562070503***63043EB6"},"items":[{"code":"DELIVERY001","name":"Delivery","total":500,"amount":1}],"attemps":1,"currency":"BRL","customer":{"name":"Felipe Souza","email":"lorenz3120366@sedex.net","phone":"86950031585","document":"17214211572"},"metadata":[],"created_at":"2026-01-07 14:43:12","expires_at":"2026-01-08 17:43:12","updated_at":"2026-01-07 14:44:29","approved_at":"2026-01-07 14:44:29","sale_amount":500,"installments":1,"max_attempts":1,"payment_code":"vpaprl3ooj","subscription":[],"external_code":"delivery_695e9b2fd54be","payment_amount":500,"payment_method":"pix","payment_status":"approved","shipping_amount":0,"installment_amount":500}
+[07-Jan-2026 17:44:30 UTC] [Webhook] ℹ️ Processando pagamento ID: vpaprl3ooj com status: approved
+[07-Jan-2026 17:44:30 UTC] [INFO] [Webhook] ✅ Conexão com banco de dados estabelecida
+[07-Jan-2026 17:44:30 UTC] [INFO] 🔄 Atualizando status para: paid
+[07-Jan-2026 17:44:30 UTC] [INFO] 📁 Status salvo em arquivo: /home/customer/www/bonusdotiktok.com/public_html/transactions/vpaprl3ooj.json
+[07-Jan-2026 17:44:30 UTC] [Webhook] ❌ Erro: SQLSTATE[HY000]: General error: 1 no such table: pedidos
+[07-Jan-2026 17:44:30 UTC] [Webhook] 🔍 Stack trace: #0 /home/customer/www/bonusdotiktok.com/public_html/webhook.php(121): PDO->prepare('UPDATE pedidos ...')
+#1 {main}
+[07-Jan-2026 18:04:15 UTC] [INFO] 🔄 Iniciando processamento do webhook
+[07-Jan-2026 18:04:15 UTC] [INFO] 📦 Payload recebido: {"pix":{"pix_qrcode_text":"00020101021226850014br.gov.bcb.pix2563qrcode.blupayip.com.br\/pix\/31b3f327-a905-4717-8337-642bbbe8a77f5204000053039865802BR5921MARKETPLACESEGUROLTDA6005Belem61086603506562070503***6304CB2B"},"items":[{"code":"DELIVERY001","name":"Delivery","total":500,"amount":1}],"attemps":1,"currency":"BRL","customer":{"name":"Arthur Soares","email":"customer+34090749611@mangofy.com.br","phone":"44961789271","document":"34090749611"},"metadata":[],"created_at":"2026-01-07 15:04:12","expires_at":"2026-01-08 18:04:13","updated_at":"2026-01-07 15:04:14","sale_amount":500,"installments":1,"max_attempts":1,"payment_code":"vpaeomk602","subscription":[],"external_code":"delivery_695ea01c932ca","payment_amount":500,"payment_method":"pix","payment_status":"pending","shipping_amount":0,"installment_amount":500}
+[07-Jan-2026 18:04:15 UTC] [Webhook] ℹ️ Processando pagamento ID: vpaeomk602 com status: pending
+[07-Jan-2026 18:04:15 UTC] [INFO] [Webhook] ✅ Conexão com banco de dados estabelecida
+[07-Jan-2026 18:04:15 UTC] [INFO] 🔄 Atualizando status para: pending
+[07-Jan-2026 18:04:15 UTC] [INFO] 📁 Status salvo em arquivo: /home/customer/www/bonusdotiktok.com/public_html/transactions/vpaeomk602.json
+[07-Jan-2026 18:04:15 UTC] [Webhook] ❌ Erro: SQLSTATE[HY000]: General error: 1 no such table: pedidos
+[07-Jan-2026 18:04:15 UTC] [Webhook] 🔍 Stack trace: #0 /home/customer/www/bonusdotiktok.com/public_html/webhook.php(121): PDO->prepare('UPDATE pedidos ...')
+#1 {main}
+[07-Jan-2026 18:05:04 UTC] [INFO] 🔄 Iniciando processamento do webhook
+[07-Jan-2026 18:05:04 UTC] [INFO] 📦 Payload recebido: {"pix":{"pix_qrcode_text":"00020101021226850014br.gov.bcb.pix2563qrcode.blupayip.com.br\/pix\/31b3f327-a905-4717-8337-642bbbe8a77f5204000053039865802BR5921MARKETPLACESEGUROLTDA6005Belem61086603506562070503***6304CB2B"},"items":[{"code":"DELIVERY001","name":"Delivery","total":500,"amount":1}],"attemps":1,"currency":"BRL","customer":{"name":"Arthur Soares","email":"customer+34090749611@mangofy.com.br","phone":"44961789271","document":"34090749611"},"metadata":[],"created_at":"2026-01-07 15:04:12","expires_at":"2026-01-08 18:04:13","updated_at":"2026-01-07 15:05:01","approved_at":"2026-01-07 15:05:01","sale_amount":500,"installments":1,"max_attempts":1,"payment_code":"vpaeomk602","subscription":[],"external_code":"delivery_695ea01c932ca","payment_amount":500,"payment_method":"pix","payment_status":"approved","shipping_amount":0,"installment_amount":500}
+[07-Jan-2026 18:05:04 UTC] [Webhook] ℹ️ Processando pagamento ID: vpaeomk602 com status: approved
+[07-Jan-2026 18:05:04 UTC] [INFO] [Webhook] ✅ Conexão com banco de dados estabelecida
+[07-Jan-2026 18:05:04 UTC] [INFO] 🔄 Atualizando status para: paid
+[07-Jan-2026 18:05:04 UTC] [INFO] 📁 Status salvo em arquivo: /home/customer/www/bonusdotiktok.com/public_html/transactions/vpaeomk602.json
+[07-Jan-2026 18:05:04 UTC] [Webhook] ❌ Erro: SQLSTATE[HY000]: General error: 1 no such table: pedidos
+[07-Jan-2026 18:05:04 UTC] [Webhook] 🔍 Stack trace: #0 /home/customer/www/bonusdotiktok.com/public_html/webhook.php(121): PDO->prepare('UPDATE pedidos ...')
+#1 {main}
+[07-Jan-2026 18:10:02 UTC] [INFO] 🔄 Iniciando processamento do webhook
+[07-Jan-2026 18:10:02 UTC] [INFO] 📦 Payload recebido: {"pix":{"pix_qrcode_text":"00020101021226850014br.gov.bcb.pix2563qrcode.blupayip.com.br\/pix\/ad9ed35a-2c6e-46c3-bd18-239eff962cfe5204000053039865802BR5921MARKETPLACESEGUROLTDA6005Belem61086603506562070503***6304626C"},"items":[{"code":"DELIVERY001","name":"Delivery","total":500,"amount":1}],"attemps":1,"currency":"BRL","customer":{"name":"Mariana Santos","email":"customer+13397842034@mangofy.com.br","phone":"19966898145","document":"13397842034"},"metadata":[],"created_at":"2026-01-07 15:09:59","expires_at":"2026-01-08 18:10:00","updated_at":"2026-01-07 15:10:01","sale_amount":500,"installments":1,"max_attempts":1,"payment_code":"vpa6vn3e8m","subscription":[],"external_code":"delivery_695ea17742d74","payment_amount":500,"payment_method":"pix","payment_status":"pending","shipping_amount":0,"installment_amount":500}
+[07-Jan-2026 18:10:02 UTC] [Webhook] ℹ️ Processando pagamento ID: vpa6vn3e8m com status: pending
+[07-Jan-2026 18:10:02 UTC] [INFO] [Webhook] ✅ Conexão com banco de dados estabelecida
+[07-Jan-2026 18:10:02 UTC] [INFO] 🔄 Atualizando status para: pending
+[07-Jan-2026 18:10:02 UTC] [INFO] 📁 Status salvo em arquivo: /home/customer/www/bonusdotiktok.com/public_html/offer/transactions/vpa6vn3e8m.json
+[07-Jan-2026 18:10:02 UTC] [Webhook] ❌ Erro: SQLSTATE[HY000]: General error: 1 no such table: pedidos
+[07-Jan-2026 18:10:02 UTC] [Webhook] 🔍 Stack trace: #0 /home/customer/www/bonusdotiktok.com/public_html/webhook.php(121): PDO->prepare('UPDATE pedidos ...')
+#1 {main}
+[07-Jan-2026 18:10:51 UTC] [INFO] 🔄 Iniciando processamento do webhook
+[07-Jan-2026 18:10:51 UTC] [INFO] 📦 Payload recebido: {"pix":{"pix_qrcode_text":"00020101021226850014br.gov.bcb.pix2563qrcode.blupayip.com.br\/pix\/ad9ed35a-2c6e-46c3-bd18-239eff962cfe5204000053039865802BR5921MARKETPLACESEGUROLTDA6005Belem61086603506562070503***6304626C"},"items":[{"code":"DELIVERY001","name":"Delivery","total":500,"amount":1}],"attemps":1,"currency":"BRL","customer":{"name":"Mariana Santos","email":"customer+13397842034@mangofy.com.br","phone":"19966898145","document":"13397842034"},"metadata":[],"created_at":"2026-01-07 15:09:59","expires_at":"2026-01-08 18:10:00","updated_at":"2026-01-07 15:10:50","approved_at":"2026-01-07 15:10:50","sale_amount":500,"installments":1,"max_attempts":1,"payment_code":"vpa6vn3e8m","subscription":[],"external_code":"delivery_695ea17742d74","payment_amount":500,"payment_method":"pix","payment_status":"approved","shipping_amount":0,"installment_amount":500}
+[07-Jan-2026 18:10:51 UTC] [Webhook] ℹ️ Processando pagamento ID: vpa6vn3e8m com status: approved
+[07-Jan-2026 18:10:51 UTC] [INFO] [Webhook] ✅ Conexão com banco de dados estabelecida
+[07-Jan-2026 18:10:51 UTC] [INFO] 🔄 Atualizando status para: paid
+[07-Jan-2026 18:10:51 UTC] [INFO] 📁 Status salvo em arquivo: /home/customer/www/bonusdotiktok.com/public_html/offer/transactions/vpa6vn3e8m.json
+[07-Jan-2026 18:10:51 UTC] [Webhook] ❌ Erro: SQLSTATE[HY000]: General error: 1 no such table: pedidos
+[07-Jan-2026 18:10:51 UTC] [Webhook] 🔍 Stack trace: #0 /home/customer/www/bonusdotiktok.com/public_html/webhook.php(121): PDO->prepare('UPDATE pedidos ...')
+#1 {main}
+[07-Jan-2026 18:14:57 UTC] [INFO] 🔄 Iniciando processamento do webhook
+[07-Jan-2026 18:14:57 UTC] [INFO] 📦 Payload recebido: {"pix":{"pix_qrcode_text":"00020101021226820014br.gov.bcb.pix2560pix.stone.com.br\/pix\/v2\/bacaf943-a9a0-4298-8f37-7f69b7f9b87e52040000530398654045.005802BR5923Mangofy Tecnologia Ltda6014RIO DE JANEIRO6229052531b0590054569e915153b694b6304812A"},"items":[{"code":"DELIVERY001","name":"Delivery","total":500,"amount":1}],"attemps":1,"currency":"BRL","customer":{"name":"Mariana Lima","email":"lorenz4279967@sedex.net","phone":"75954119822","document":"39478562533"},"metadata":[],"created_at":"2026-01-07 15:14:54","expires_at":"2026-01-08 15:14:55","updated_at":"2026-01-07 15:14:56","sale_amount":500,"installments":1,"max_attempts":1,"payment_code":"vpavpmknvd","subscription":[],"external_code":"delivery_695ea29e89494","payment_amount":500,"payment_method":"pix","payment_status":"pending","shipping_amount":0,"installment_amount":500}
+[07-Jan-2026 18:14:57 UTC] [Webhook] ℹ️ Processando pagamento ID: vpavpmknvd com status: pending
+[07-Jan-2026 18:14:57 UTC] [INFO] [Webhook] ✅ Conexão com banco de dados estabelecida
+[07-Jan-2026 18:14:57 UTC] [INFO] 🔄 Atualizando status para: pending
+[07-Jan-2026 18:14:57 UTC] [INFO] 📁 Status salvo em arquivo: /home/customer/www/bonusdotiktok.com/public_html/offer/transactions/vpavpmknvd.json
+[07-Jan-2026 18:14:57 UTC] [Webhook] ❌ Erro: SQLSTATE[HY000]: General error: 1 no such table: pedidos
+[07-Jan-2026 18:14:57 UTC] [Webhook] 🔍 Stack trace: #0 /home/customer/www/bonusdotiktok.com/public_html/webhook.php(121): PDO->prepare('UPDATE pedidos ...')
+#1 {main}
+[07-Jan-2026 18:15:25 UTC] [INFO] 🔄 Iniciando processamento do webhook
+[07-Jan-2026 18:15:25 UTC] [INFO] 📦 Payload recebido: {"pix":{"pix_qrcode_text":"00020101021226820014br.gov.bcb.pix2560pix.stone.com.br\/pix\/v2\/bacaf943-a9a0-4298-8f37-7f69b7f9b87e52040000530398654045.005802BR5923Mangofy Tecnologia Ltda6014RIO DE JANEIRO6229052531b0590054569e915153b694b6304812A"},"items":[{"code":"DELIVERY001","name":"Delivery","total":500,"amount":1}],"attemps":1,"currency":"BRL","customer":{"name":"Mariana Lima","email":"lorenz4279967@sedex.net","phone":"75954119822","document":"39478562533"},"metadata":[],"created_at":"2026-01-07 15:14:54","expires_at":"2026-01-08 15:14:55","updated_at":"2026-01-07 15:15:23","approved_at":"2026-01-07 15:15:23","sale_amount":500,"installments":1,"max_attempts":1,"payment_code":"vpavpmknvd","subscription":[],"external_code":"delivery_695ea29e89494","payment_amount":500,"payment_method":"pix","payment_status":"approved","shipping_amount":0,"installment_amount":500}
+[07-Jan-2026 18:15:25 UTC] [Webhook] ℹ️ Processando pagamento ID: vpavpmknvd com status: approved
+[07-Jan-2026 18:15:25 UTC] [INFO] [Webhook] ✅ Conexão com banco de dados estabelecida
+[07-Jan-2026 18:15:25 UTC] [INFO] 🔄 Atualizando status para: paid
+[07-Jan-2026 18:15:25 UTC] [INFO] 📁 Status salvo em arquivo: /home/customer/www/bonusdotiktok.com/public_html/offer/transactions/vpavpmknvd.json
+[07-Jan-2026 18:15:25 UTC] [Webhook] ❌ Erro: SQLSTATE[HY000]: General error: 1 no such table: pedidos
+[07-Jan-2026 18:15:25 UTC] [Webhook] 🔍 Stack trace: #0 /home/customer/www/bonusdotiktok.com/public_html/webhook.php(121): PDO->prepare('UPDATE pedidos ...')
+#1 {main}

